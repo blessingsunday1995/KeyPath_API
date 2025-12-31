@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "bfa63fee-e932-44b4-80f2-8510c1f9d2c5",
+		"name": "KeyPath API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19856332"
+	},
+	"item": [
+		{
+			"name": "Create Property",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "admin1",
+						"type": "text"
+					},
+					{
+						"key": "x-org-id",
+						"value": "org123",
+						"type": "text"
+					},
+					{
+						"key": "x-role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"address\": \"123 Birthday Avenue, New Year City\",\n  \"nickname\": \"Birthday Property 🎉\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/properties",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"properties"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Unit",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "admin1",
+						"type": "text"
+					},
+					{
+						"key": "x-org-id",
+						"value": "org123",
+						"type": "text"
+					},
+					{
+						"key": "x-role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"unitNumber\": \"101\",\n  \"rent\": 1500\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/properties/695528a562ffaf9908c07a3a/units",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"properties",
+						"695528a562ffaf9908c07a3a",
+						"units"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Tenant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "admin1",
+						"type": "text"
+					},
+					{
+						"key": "x-org-id",
+						"value": "org123",
+						"type": "text"
+					},
+					{
+						"key": "x-role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john.doe@example.com\"\n}"
+				},
+				"url": {
+					"raw": "{{base}}/units/69552b2b62ffaf9908c07a3e/tenants",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"units",
+						"69552b2b62ffaf9908c07a3e",
+						"tenants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Earn Credits for a Tenant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "admin1",
+						"type": "text"
+					},
+					{
+						"key": "x-org-id",
+						"value": "org123",
+						"type": "text"
+					},
+					{
+						"key": "x-role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": 100,\n  \"memo\": \"On-time rent payment - January\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/tenants/69552db862ffaf9908c07a42/credits/earn",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"tenants",
+						"69552db862ffaf9908c07a42",
+						"credits",
+						"earn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Earn Credits for a Tenant Role",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "admin1",
+						"type": "text"
+					},
+					{
+						"key": "x-org-id",
+						"value": "org123",
+						"type": "text"
+					},
+					{
+						"key": "x-role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": 100,\n  \"memo\": \"On-time rent payment - January\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base}}/tenants/69552db862ffaf9908c07a42/credits/earn",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"tenants",
+						"69552db862ffaf9908c07a42",
+						"credits",
+						"earn"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Properties",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "admin1",
+						"type": "text"
+					},
+					{
+						"key": "x-org-id",
+						"value": "org123",
+						"type": "text"
+					},
+					{
+						"key": "x-role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": 100,\n  \"memo\": \"On-time rent payment - January\"\n}"
+				},
+				"url": {
+					"raw": "{{base}}/properties?page=1&limit=5&city=Birthday",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"properties"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "city",
+							"value": "Birthday"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Properties by ID (org-scoped)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "admin1",
+						"type": "text"
+					},
+					{
+						"key": "x-org-id",
+						"value": "org123",
+						"type": "text"
+					},
+					{
+						"key": "x-role",
+						"value": "admin",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"amount\": 100,\n  \"memo\": \"On-time rent payment - January\"\n}"
+				},
+				"url": {
+					"raw": "{{base}}/properties/695528a562ffaf9908c07a3a",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"properties",
+						"695528a562ffaf9908c07a3a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Properties Unit by ID (landlord/admin only)",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET Tenants (tenant only → profile + unit info)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "69552db862ffaf9908c07a42",
+						"type": "text"
+					},
+					{
+						"key": "x-org-id",
+						"value": "org123",
+						"type": "text"
+					},
+					{
+						"key": "x-role",
+						"value": "tenant",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base}}/tenants/me",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"tenants",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET tenants By ID credits/ledger (with pagination)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-user-id",
+						"value": "69552db862ffaf9908c07a42",
+						"type": "text"
+					},
+					{
+						"key": "x-org-id",
+						"value": "org123",
+						"type": "text"
+					},
+					{
+						"key": "x-role",
+						"value": "tenant",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base}}/tenants/69552db862ffaf9908c07a42/credits/ledger?page=1&limit=20",
+					"host": [
+						"{{base}}"
+					],
+					"path": [
+						"tenants",
+						"69552db862ffaf9908c07a42",
+						"credits",
+						"ledger"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "20"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
