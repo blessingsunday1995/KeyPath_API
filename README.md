@@ -50,7 +50,7 @@ A full-featured Node.js + Express + TypeScript REST API implementing property ma
 
 ### Installation
 ```bash
-git clone <your-repo-url>
+git@github.com:blessingsunday1995/KeyPath_API.git
 cd keypath-backend
 npm install
 ```
@@ -62,7 +62,7 @@ Create a `.env` file in the root:
 MONGODB_URI=mongodb+srv://<user>:<password>@<cluster>.mongodb.net/keypath?retryWrites=true&w=majority
 JWT_SECRET=your-strong-secret-here
 REDIS_URL=redis://localhost:6379  # Optional, for bonus job
-PORT=3000
+PORT=5000
 ```
 
 ### Run Development Server
@@ -70,7 +70,7 @@ PORT=3000
 npm run dev
 ```
 
-Server will start at `http://localhost:3000`
+Server will start at `http://localhost:5000`
 
 ### Run Tests
 ```bash
@@ -122,7 +122,8 @@ Import it into Postman for quick testing.
 
 ---
 
-**Submitted by: [Your Name]**  
-**Date: December 31, 2025** 🎉
+**Submitted by: [Blessing Mgbonyebi]**  
+**Date: December 31, 2025** 
 
 Thank you for the opportunity — enjoyed building this!
+
